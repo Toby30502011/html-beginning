@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    手機上必備碼
+    <meta name="viewpoint" content="width=device-width, initial scale=1.0">
+    <title>我的第一個頁面</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        /* *表示所有*/
+        body{
+            background: #eeeeee;
+            padding: 0;
+            margin: 0;
+        }
+        @keyframes x {
+            from{
+                transform: rotate(0deg);
+            }
+            to{
+                transform: rotate(360deg);
+            }
+        }
+        #八卦{
+            width: 400px;
+            height: 400px;
+            border-radius: 200px;
+            position: relative;
+            overflow: hidden;
+            animation: x 10s linear infinite;
+            box-shadow: 0px 2px 68px 15px rgba(0,0,0,0.75);
+        }
+        
+        @media (max-width: 500px) {
+            #八卦 {
+                width: 400px;
+                height: 400px;
+            }
+        }
+        /*超過500 自動轉換成下面的,媒體查詢 每個都改長 高 除以2*/
+        /*radius 一半會是圓形, overflow為多的刪掉*/
+        /*手機上必備碼
+    <meta name="viewpoint" content="width=device-width, initial scale=1.0">*/
+        #八卦 div:first-child{
+            width: 50%;
+            height: 100%;
+            position: absolute;
+            left: 0;
+            background: black;
+        }
+        /*八卦下第一個div*/
+        #八卦 div:nth-child(2){
+            width: 50%;
+            height: 100%;
+            position: absolute;
+            right: 0;
+            background: white;
+        }
+        /*八卦下第二個div*/
+        #八卦 div:nth-child(3){
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            left: 50%;
+            margin-left: -100px;
+            border-radius: 50%;
+            background: black;
+        }
+        #八卦 div:nth-child(4){
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            left: 50%;
+            bottom:0;
+            margin-left: -100px;
+            border-radius: 50%;
+            background: white;
+        }
+        #八卦 div:nth-child(5){
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            left: 50%;
+            top: 75px;
+            margin-left: -25px;
+            border-radius: 50%;
+            background: white;
+        }
+        #八卦 div:nth-child(6){
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            left: 50%;
+            bottom: 75px;
+            margin-left: -25px;
+            border-radius: 50%;
+            background: black;
+        }
+        #八卦-wrapper{
+            height: 100vh; /*viewpoint*/
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        #八卦-描述{
+            margin-top: 1em;
+        }
+    </style>
+</head>
+<body>
+    <div id="八卦-wrapper">
+        <div id="八卦">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <div id="八卦-描述">
+            道可道，非可非
+        </div>
+    </div>
+
+</body>
+</html>
